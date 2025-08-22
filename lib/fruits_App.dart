@@ -21,7 +21,7 @@ class FruitsApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
           ),
           onGenerateRoute: appRouting.generateRoute,
-          initialRoute: Routers.onBoardingScreen,
+          initialRoute: Routers.splashScreen,
         );
       },
     );
