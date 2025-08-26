@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits/core/theming/colors_app.dart';
 import 'package:fruits/featuers/onBording/onbording_screen.dart';
 import 'package:fruits/featuers/splash/widgets/stack_custom.dart';
@@ -35,8 +34,7 @@ class _SplashScreenState extends State<SplashScreen>
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) =>
-                const OnbordingScreen()), // غير HomeScreen بصفحتك
+            builder: (context) => OnboardingScreen()), // غير HomeScreen بصفحتك
       );
     });
   }
