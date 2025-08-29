@@ -21,6 +21,7 @@ class AppTextFormField extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextDirection? textDirection;
   final TextEditingController? controller;
+  final TextAlign? textAlign;
   final Function(String?) validator;
   void Function()? onTap;
 
@@ -46,6 +47,7 @@ class AppTextFormField extends StatelessWidget {
     this.textDirection,
     this.maxLines,
     this.onTap,
+    this.textAlign,
   });
 
   @override
@@ -53,6 +55,7 @@ class AppTextFormField extends StatelessWidget {
     final bool isObscure = isObscureText ?? false;
     final int safeMaxLines = isObscure ? 1 : (maxLines ?? 1);
     return TextFormField(
+      textAlign: textAlign ?? TextAlign.start,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       onTap: onTap,
       maxLines: safeMaxLines,

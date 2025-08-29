@@ -29,6 +29,7 @@ class FruitsApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Fruits E-Commerce',
           theme: ThemeData(
+            fontFamily: 'Cairo',
             scaffoldBackgroundColor: ColorsApp.backGroundWhite,
           ),
           onGenerateRoute: appRouting.generateRoute,

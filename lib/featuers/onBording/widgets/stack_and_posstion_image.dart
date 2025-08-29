@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruits/core/cached/constants.dart';
+import 'package:fruits/core/cached/sharedprefrance_singltone.dart';
 
 import 'package:fruits/core/helper/navigation.dart';
 import 'package:fruits/featuers/onBording/data/model/model_onbording.dart';
@@ -41,22 +43,22 @@ class StackAndPossitionImages extends StatelessWidget {
           ),
           if (index == 0)
             Positioned(
-              top: 15,
-              right: 15,
-              child: TextButton(
-                onPressed: () {
-                  // Handle skip action
-                  context.pushNamed(Routers.homeScreen);
-                },
-                child: Text(
-                  'Skip',
-                  style: TextStyle(
-                    color: Colors.black26,
-                    fontSize: 16,
+                top: 15,
+                right: 15,
+                child: TextButton(
+                  onPressed: () {
+                    SharedPreferenceSingleton.instance
+                        .setBool(isOnboardingSeen, true);
+                    context.pushNamed(Routers.loginScreen);
+                  },
+                  child: const Text(
+                    'Skip',
+                    style: TextStyle(
+                      color: Colors.black26,
+                      fontSize: 16,
+                    ),
                   ),
-                ),
-              ),
-            ),
+                )),
         ],
       ),
     );
