@@ -8,7 +8,7 @@ class ColorsApp {
   static const Color lightBlue2 = Color(0xFFEDF3FC);
 
   static const Color backGroundWhite = Color(0xffFAFAFD);
-  static const Color green = Color(0xFF0E9D57);
+  static const Color green = Color(0xff1B5E37);
   static const Color lightGray = Color(0xFFCACBCE);
   static const Color lightBlueGray = Color(0xFFAFB0B6);
   static const Color gray = Color(0xFF95969D);

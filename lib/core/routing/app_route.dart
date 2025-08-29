@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits/core/routing/routers.dart';
+import 'package:fruits/featuers/auth/login/login_screen.dart';
 import 'package:fruits/featuers/home/home_screen.dart';
 import 'package:fruits/featuers/onBording/onbording_screen.dart';
 import 'package:fruits/featuers/splash/splash_screen.dart';
@@ -17,7 +18,12 @@ class AppRouting {
         return MaterialPageRoute(
           builder: (_) => OnboardingScreen(),
         );
-// home Screen
+      // login Screen
+      case Routers.loginScreen:
+        return MaterialPageRoute(
+          builder: (_) => LoginScreen(),
+        );
+      // home Screen
       case Routers.homeScreen:
         return MaterialPageRoute(
           builder: (_) => HomeScreen(),

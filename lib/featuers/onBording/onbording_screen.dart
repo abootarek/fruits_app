@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruits/core/cached/constants.dart';
+import 'package:fruits/core/cached/sharedprefrance_singltone.dart';
 import 'package:fruits/core/helper/navigation.dart';
 import 'package:fruits/core/helper/spacing.dart';
 import 'package:fruits/core/routing/routers.dart';
@@ -65,8 +67,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   borderRadius: 16,
                   backgroundColor: ColorsApp.green,
                   onPressed: () {
+                    SharedPreferenceSingleton.instance
+                        .setBool(isOnboardingSeen, true);
                     if (currentPage == onboardingData.length - 1) {
-                      context.pushNamed(Routers.homeScreen);
+                      context.pushNamed(Routers.loginScreen);
                     } else {
                       _pageController.nextPage(
                         duration: const Duration(milliseconds: 300),
