@@ -20,6 +20,11 @@ class TextStyles {
     color: ColorsApp.gray,
     fontWeight: FontWeightHelper.semiBold,
   );
+  static final TextStyle font13Gray = TextStyle(
+    fontSize: 13.sp,
+    color: ColorsApp.gray,
+    fontWeight: FontWeightHelper.semiBold,
+  );
 
   static final TextStyle font14Black = TextStyle(
     fontSize: 14.sp,
@@ -63,11 +68,11 @@ class TextStyles {
   static final TextStyle font13GreenSemiBold = TextStyle(
     fontSize: 13.sp,
     fontWeight: FontWeightHelper.semiBold,
-    color: ColorsApp.green,
+    color: ColorsApp.lightGreen,
   );
   static final TextStyle font16GreenSemiBold = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.semiBold,
-    color: ColorsApp.green,
+    color: ColorsApp.lightGreen,
   );
 }

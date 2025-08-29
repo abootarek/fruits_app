@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ColorsApp {
-  static const Color darkBlue = Color(0xFF2C557D);
-  static const Color mainBlue = Color(0xff356899);
-  static const Color lightBlue = Color(0xFF5386E4);
-
   static const Color lightBlue2 = Color(0xFFEDF3FC);
 
   static const Color backGroundWhite = Color(0xffFAFAFD);
   static const Color green = Color(0xff1B5E37);
+  static const Color lightGreen = Color(0xff2D9F5D);
   static const Color lightGray = Color(0xFFCACBCE);
   static const Color lightBlueGray = Color(0xFFAFB0B6);
   static const Color gray = Color(0xFF95969D);

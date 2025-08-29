@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                 buttonText: 'تسجيل الدخول',
                 textStyle: TextStyles.font16WhiteBold,
               ),
-              verticalSpace(33.0),
+              verticalSpace(16.0),
               CreateAccountNewAndDivider(),
               verticalSpace(16.0),
               LoginWithSocialMedia(

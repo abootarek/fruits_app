@@ -73,7 +73,7 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsApp.mainBlue,
+                color: ColorsApp.green,
                 width: 1,
               ),
               borderRadius: BorderRadius.circular(10.0),
@@ -104,7 +104,7 @@ class AppTextFormField extends StatelessWidget {
         prefixStyle: TextStyles.font14Red,
         hintStyle: hintStyle ?? TextStyles.font14Gray,
         // .copyWith(color: ColorsApp.lightBlueGray),
-        counterStyle: TextStyles.font14Red,
+        counterStyle: TextStyles.font14Gray,
         // labelStyle: TextStyles.font14Gray,
         hintText: hintText,
         suffixIcon: suffixIcon,
@@ -117,7 +117,7 @@ class AppTextFormField extends StatelessWidget {
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: TextStyles.font14Black,
+      style: inputTextStyle ?? TextStyles.font14Black,
       validator: (value) => validator(value),
     );
   }
