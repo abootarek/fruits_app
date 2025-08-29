@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits/core/routing/routers.dart';
 import 'package:fruits/featuers/auth/login/login_screen.dart';
+import 'package:fruits/featuers/auth/register/register_screen.dart';
 import 'package:fruits/featuers/home/home_screen.dart';
 import 'package:fruits/featuers/onBording/onbording_screen.dart';
 import 'package:fruits/featuers/splash/splash_screen.dart';
@@ -22,6 +23,11 @@ class AppRouting {
       case Routers.loginScreen:
         return MaterialPageRoute(
           builder: (_) => LoginScreen(),
+        );
+      // register Screen
+      case Routers.registerScreen:
+        return MaterialPageRoute(
+          builder: (_) => RegisterScreen(),
         );
       // home Screen
       case Routers.homeScreen:

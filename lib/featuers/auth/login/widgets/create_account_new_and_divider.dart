@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruits/core/helper/navigation.dart';
 import 'package:fruits/core/helper/spacing.dart';
+import 'package:fruits/core/routing/routers.dart';
 import 'package:fruits/core/theming/colors_app.dart';
 import 'package:fruits/core/theming/style_app.dart';
 
@@ -19,7 +21,9 @@ class CreateAccountNewAndDivider extends StatelessWidget {
               style: TextStyles.font16Gray,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routers.registerScreen);
+              },
               child: Text(
                 'إنشاء حساب جديد',
                 style: TextStyles.font16GreenSemiBold,
@@ -27,7 +31,7 @@ class CreateAccountNewAndDivider extends StatelessWidget {
             ),
           ],
         ),
-        verticalSpace(33.0),
+        verticalSpace(16.0),
         Row(
           children: [
             Expanded(
