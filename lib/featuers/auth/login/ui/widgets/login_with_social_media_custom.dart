@@ -1,8 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits/core/theming/colors_app.dart';
 import 'package:fruits/core/theming/style_app.dart';
+import 'package:fruits/featuers/auth/login/cubit/login_cubit.dart';
 
 class LoginWithSocialMedia extends StatelessWidget {
   const LoginWithSocialMedia({
@@ -17,8 +19,7 @@ class LoginWithSocialMedia extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print('Login with $text');
-        // TODO: Implement login with social media
+        context.read<SignInCubit>().signInWithGoogle();
       },
       child: Container(
         width: double.infinity,
@@ -37,8 +38,8 @@ class LoginWithSocialMedia extends StatelessWidget {
             ),
             Icon(
               icon,
-              size: 40.r,
-            )
+              size: 55.r,
+            ),
           ],
         ),
       ),
