@@ -5,7 +5,9 @@ void showLoadingDialog(BuildContext context) {
     context: context,
     barrierDismissible: false,
     builder: (_) => Center(
-      child: CircularProgressIndicator(),
+      child: CircularProgressIndicator(
+        color: Colors.green,
+      ),
     ),
   );
 }

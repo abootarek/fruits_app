@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:fruits/core/helper/navigation.dart';
+import 'package:fruits/core/routing/routers.dart';
 import 'package:fruits/core/theming/colors_app.dart';
 import 'package:fruits/core/theming/style_app.dart';
 
 class CheckBoxAndCondition extends StatefulWidget {
-  const CheckBoxAndCondition({super.key});
+  const CheckBoxAndCondition({super.key, required this.onChanged});
+  final ValueChanged<bool>? onChanged;
 
   @override
   State<CheckBoxAndCondition> createState() => _CheckBoxAndConditionState();
@@ -11,6 +14,7 @@ class CheckBoxAndCondition extends StatefulWidget {
 
 class _CheckBoxAndConditionState extends State<CheckBoxAndCondition> {
   bool isChecked = false;
+  // check Condition
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +35,7 @@ class _CheckBoxAndConditionState extends State<CheckBoxAndCondition> {
             onChanged: (value) {
               setState(() {
                 isChecked = value ?? false;
+                widget.onChanged?.call(isChecked);
               });
             },
           ),
@@ -44,9 +49,11 @@ class _CheckBoxAndConditionState extends State<CheckBoxAndCondition> {
                   style: TextStyles.font13Gray,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    context.pushNamed(Routers.conditionAndTermsScreen);
+                  },
                   child: Text(
-                    ' الشروط ولا الأحكام الخاصة بنا',
+                    ' الشروط و الأحكام الخاصة بنا',
                     style: TextStyles.font13GreenSemiBold,
                   ),
                 ),
